@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(153 151 151 / 50%);
+    position: fixed;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+header img{
+    cursor: pointer;
+}
+@media (max-width:899px) {
+    header ul{
+    list-style: none;
+    padding: 50px 0;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 2;
+    width: 250px;
+    mAX-width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+}
+}
+header ul li{
+    margin: 20px;
+}
+header ul li a{
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    color: hsl(240, 100%, 5%);
+}
+header ul li a:hover{
+    color: hsl(5, 85%, 63%);
+}
+header .close{
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+    right: 200px;
+    padding: 40px 0;
+}
+.hide{
+    display: none;
+}
+@media (min-width:900px) {
+    header ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+}
+.sections{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+@media (min-width:900px) {
+    header,
+    .sections{
+        padding: 20px 50px;
+    }
+    .menu{
+        display: none;
+    }
+}
+.sections .picture img{
+    width: 100%;
+}
+.sections .picture{
+    width: 100%;
+    grid-area: img;
+}
+.sections .webFutur{
+    grid-area: feature;
+}
+.sections .webFuture h1{
+    font-weight: 800;
+    font-size: 45px;
+    margin: 15px 0;
+}
+.sections .webFuture .btn{
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    display: inline-block;
+    padding: 17px 30px;
+    text-transform: uppercase;
+    letter-spacing: 5.5px;
+    margin: 20px 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+.sections .webFuture .btn:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+.sections .new-box{
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    padding: 15px;
+    height: 100%;
+    width: 335px;
+    min-width: 100%;
+    grid-area: new;
+}
+.sections .new-box h2{
+    color: hsl(35, 77%, 62%);
+    font-size: 35px;
+    margin: 25px 0;
+}
+.sections .new-box h3{
+    font-size: 20px;
+    margin-bottom: 23px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    cursor: pointer;
+}
+.sections .new-box h3:hover{
+    color: hsl(35, 77%, 62%);
+}
+.sections .new-box div{
+    margin: 20px 0;
+}
+.sections .new-box hr{
+    border: none;
+    height: 1px;
+    background-color: hsla(237, 24%, 83%, 0.425);
+}
+.sections .new-box p{
+    color: hsl(237, 24%, 83%);
+    line-height: 1.7;
+    font-weight: 400;
+}
+.sections .boxes{
+    grid-area: boxes;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.sections .boxes .box{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 20px 0;
+}
+.sections .boxes .box img{
+    width: 120px;
+}
+.sections .boxes .box div{
+    padding: 0 10px;
+    width: 240px;
+}
+.sections .boxes .box div span{
+    color: hsl(233, 8%, 79%);
+    font-size: 30px;
+    font-weight: 700;
+}
+.sections .boxes .box h3{
+    margin: 10px 0;
+    cursor: pointer;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.sections .boxes .box h3:hover{
+    color: hsl(5, 85%, 63%);
+}
+.sections .boxes .box p{
+    color: hsl(236, 13%, 42%);
+    font-size: 400;
+}
+@media (min-width:900px) {
+    .sections .webFuture{
+        display: flex;
+        align-items: center;
+    }
+    .sections{
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 'img img img new' 
+        'feature feature feature new'
+        'boxes boxes boxes boxes';
+    }
+}
